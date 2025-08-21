@@ -60,3 +60,9 @@
 			</div>
 		</nav>
     </header>
+
+	<div class="main-wrapper">
+	    <header class="page-title theme-bg-light text-center gradient py-5">
+			<!-- 'the_title()' -> dynamically loading the title from what we have set in Page in WordPress backend -->
+			<h1 class="heading"><?php the_title(); ?></h1>
+		</header>
