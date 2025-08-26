@@ -48,3 +48,18 @@ function followkumar_register_scripts(){
     
 }
 add_action('wp_enqueue_scripts', 'followkumar_register_scripts' );
+
+
+// This function is for dynamically loading sidebar menu
+function followkumar_menus()  {
+    // Inorder to setup menus in WordPress, we need to setup menus location i.e. where we want menus to be displayed. Here, we are setting up two menus location.
+    $locations = array(
+        // In this array, key is menu location name and value is like the title
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+    // this is default wordpress function for registering menus. without this 'Menus' will not appear inside Appearance
+    register_nav_menus($locations);
+}
+// If we don't hook into 'init' hook also 'Menus' will not appear inside Appearance
+add_action('init', 'followkumar_menus');
