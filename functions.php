@@ -4,6 +4,8 @@
 function followkumar_theme_support(){
     // Adds dynamic title tag support
     add_theme_support('title-tag');
+    // Adds dynamic logo support
+    add_theme_support('custom-logo');
 }
 add_action('after_setup_theme', 'followkumar_theme_support');
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://youtube.com/FollowAndrew">    
-    <link rel="shortcut icon" href="images/logo.png"> 
+    <link rel="shortcut icon" href="/wp-content/themes/custom-theme/assets/images/logo.png"> 
     
   
 	<!-- This 'wp_head()' function dynamically loads the css from functions.php in the head -->
@@ -37,29 +37,14 @@
 					array(
 						'menu' => 'primary',
 						'container' => '',
-						'theme_location' => 'primary'
+						'theme_location' => 'primary',
+						// %3$s - This is a placeholder that gets replaced with the actual menu items (<li> elements). The %3$s placeholder is crucial - it tells WordPress where to insert the actual menu items.
+						'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
 					)
-
 				 );
 				 ?>
 				
-				<ul class="navbar-nav flex-column text-sm-center text-md-left">
-					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="post.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="page.html"><i class="fas fa-file-image fa-fw mr-2"></i>Blog Page</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="archive.html"><i class="fas fa-archive fa-fw mr-2"></i>Blog Archive</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
-					</li>
-				</ul>
+				
 				<hr>
 				<ul class="social-list list-inline py-3 mx-auto">
 					<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
