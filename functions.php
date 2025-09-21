@@ -5,6 +5,7 @@ function followkumar_theme_support(){
     // Adds dynamic title tag support
     add_theme_support('title-tag');
     // Adds dynamic logo support
+    // Just adding this won't show the logo; all it does is it enables the option in Customize to upload the logo; to display it we need write separate line of code (check header.php file for the code to output the logo)
     add_theme_support('custom-logo');
 }
 add_action('after_setup_theme', 'followkumar_theme_support');
