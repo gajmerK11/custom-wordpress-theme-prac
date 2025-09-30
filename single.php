@@ -11,8 +11,7 @@ get_header();
 					// 'the_post()' function activates the current post from all the available posts
 					the_post();
 					
-					// 'the_content()' function grabs the content in the post and displays it
-					the_content();
+					get_template_part('template-parts/content', 'article');
 				
 				}
 			}
